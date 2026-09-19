@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ORBITA: camisetas y equipamiento para llevar el deporte dentro y fuera de la cancha.">
+  <title>ORBITA | E-commerce Deportivo</title>
+
+  <!-- Estilos: los aporta la rama-css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="header" id="inicio">
+    <div class="contenedor header__contenido">
+      <a href="#inicio" class="logo" aria-label="ORBITA, ir al inicio">ORBITA</a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        ☰
+      </button>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista" id="menu-principal">
+          <li><a href="#colecciones" class="nav__link">Colecciones</a></li>
+          <li><a href="#destacados" class="nav__link">Destacados</a></li>
+          <li><a href="#equipos" class="nav__link">Equipos</a></li>
+          <li><a href="#confianza" class="nav__link">Envíos y cambios</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="carrito-btn" id="carrito-btn" type="button" aria-label="Ver carrito">
+        🛒 <span class="carrito-contador" id="carrito-contador">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__grid">
+        <div class="hero__texto">
+          <p class="hero__meta">
+            <span><strong>2026</strong> Temporada</span>
+            <span><strong>14</strong> Prendas</span>
+            <span><strong>4</strong> Clubes</span>
+          </p>
+          <h1 class="hero__titulo" id="hero-titulo">Tu juego. Tu órbita.</h1>
+          <p class="hero__descripcion">
+            Camisetas y equipamiento para llevar el deporte dentro y fuera de la cancha.
+          </p>
+          <div class="hero__acciones">
+            <a href="#destacados" class="btn btn--primario">Comprar ahora</a>
+            <a href="#colecciones" class="btn btn--secundario">Ver colecciones</a>
+          </div>
+        </div>
+
+        <figure class="hero__imagen">
+          <img src="img/hero.webp" alt="Jugador con camiseta deportiva en la cancha">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== BENEFICIOS RÁPIDOS ===================== -->
+    <section class="beneficios" aria-label="Beneficios">
+      <div class="contenedor beneficios__lista">
+        <div class="beneficio">
+          <strong class="beneficio__cifra">2–5</strong>
+          <span class="beneficio__texto">días hábiles de entrega</span>
+        </div>
+        <div class="beneficio">
+          <strong class="beneficio__cifra">30</strong>
+          <span class="beneficio__texto">días para cambios</span>
+        </div>
+        <div class="beneficio">
+          <strong class="beneficio__cifra">100%</strong>
+          <span class="beneficio__texto">pago seguro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COLECCIONES ===================== -->
+    <section class="seccion colecciones" id="colecciones" aria-labelledby="colecciones-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="colecciones-titulo">¿Qué vas a jugar hoy?</h2>
+
+        <ul class="colecciones__lista">
+          <li>
+            <article class="coleccion">
+              <img src="img/coleccion-futbol.webp" alt="Balón de fútbol sobre el césped">
+              <div class="coleccion__contenido">
+                <h3 class="coleccion__titulo">Fútbol</h3>
+                <p class="coleccion__descripcion">Camisetas de club, local y visitante, listas para el partido.</p>
+                <a href="#destacados" class="coleccion__link">Explorar</a>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="coleccion">
+              <img src="img/coleccion-running.webp" alt="Corredora en la ciudad">
+              <div class="coleccion__contenido">
+                <h3 class="coleccion__titulo">Running</h3>
+                <p class="coleccion__descripcion">Prendas y capas pensadas para sostener tu propio ritmo.</p>
+                <a href="#destacados" class="coleccion__link">Explorar</a>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="coleccion">
+              <img src="img/coleccion-entrenamiento.webp" alt="Persona entrenando en el gimnasio">
+              <div class="coleccion__contenido">
+                <h3 class="coleccion__titulo">Entrenamiento</h3>
+                <p class="coleccion__descripcion">Capas ligeras para activar, insistir y volver a empezar.</p>
+                <a href="#destacados" class="coleccion__link">Explorar</a>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="coleccion">
+              <img src="img/coleccion-retro.webp" alt="Camiseta de fútbol de estilo retro">
+              <div class="coleccion__contenido">
+                <h3 class="coleccion__titulo">Retro</h3>
+                <p class="coleccion__descripcion">Diseños clásicos que vuelven a la cancha y a la calle.</p>
+                <a href="#destacados" class="coleccion__link">Explorar</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTOS DESTACADOS ===================== -->
+    <section class="seccion destacados" id="destacados" aria-labelledby="destacados-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="destacados-titulo">Selección ORBITA</h2>
+
+        <!-- Filtros: la rama-js les da funcionamiento -->
+        <div class="filtros" id="filtros">
+          <button class="filtro filtro--activo" type="button" data-filtro="todos">Todos</button>
+          <button class="filtro" type="button" data-filtro="futbol">Fútbol</button>
+          <button class="filtro" type="button" data-filtro="retro">Retro</button>
+          <button class="filtro" type="button" data-filtro="running">Running</button>
+        </div>
+
+        <ul class="productos" id="productos">
+          <li class="producto" data-categoria="futbol">
+            <img src="img/producto-1.webp" alt="Camiseta Local Distrito Norte 26, negra con detalles lima">
+            <h3 class="producto__nombre">Camiseta Local Distrito Norte 26</h3>
+            <p class="producto__precio">$279.900</p>
+            <button class="btn btn--agregar" type="button" data-id="1" data-nombre="Camiseta Local Distrito Norte 26" data-precio="279900">Agregar al carrito</button>
+          </li>
+          <li class="producto" data-categoria="futbol">
+            <img src="img/producto-2.webp" alt="Camiseta Local Pacífico 92, azul profundo">
+            <h3 class="producto__nombre">Camiseta Local Pacífico 92</h3>
+            <p class="producto__precio">$269.900</p>
+            <button class="btn btn--agregar" type="button" data-id="2" data-nombre="Camiseta Local Pacífico 92" data-precio="269900">Agregar al carrito</button>
+          </li>
+          <li class="producto" data-categoria="retro">
+            <img src="img/producto-3.webp" alt="Camiseta Retro Órbita 92, azul">
+            <h3 class="producto__nombre">Camiseta Retro Órbita 92</h3>
+            <p class="producto__precio">$249.900</p>
+            <button class="btn btn--agregar" type="button" data-id="3" data-nombre="Camiseta Retro Órbita 92" data-precio="249900">Agregar al carrito</button>
+          </li>
+          <li class="producto" data-categoria="running">
+            <img src="img/producto-4.webp" alt="Camiseta Técnica Running ORBITA, color lima">
+            <h3 class="producto__nombre">Camiseta Técnica Running ORBITA</h3>
+            <p class="producto__precio">$149.900</p>
+            <button class="btn btn--agregar" type="button" data-id="4" data-nombre="Camiseta Técnica Running ORBITA" data-precio="149900">Agregar al carrito</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CAMPAÑAS ===================== -->
+    <section class="seccion campanas" aria-labelledby="campanas-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="campanas-titulo">Campañas</h2>
+
+        <div class="campanas__grid">
+          <article class="campana">
+            <img src="img/campana-1.webp" alt="Jugadores calentando antes del partido">
+            <div class="campana__contenido">
+              <h3 class="campana__titulo">Antes del silbato.</h3>
+              <p>Capas ligeras, tacto técnico y la camiseta que concentra el ritual previo al partido.</p>
+              <a href="#destacados" class="btn btn--primario">Comprar fútbol</a>
+            </div>
+          </article>
+          <article class="campana">
+            <img src="img/campana-2.webp" alt="Jugadores disputando el balón">
+            <div class="campana__contenido">
+              <h3 class="campana__titulo">El juego también se lleva.</h3>
+              <p>Prendas deportivas hechas para moverse entre la cancha, la tribuna y la ciudad.</p>
+              <a href="#colecciones" class="btn btn--primario">Ver entrenamiento</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EQUIPOS ===================== -->
+    <section class="seccion equipos" id="equipos" aria-labelledby="equipos-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="equipos-titulo">Compra por equipo</h2>
+        <p>Cuatro clubes ficticios con kit local y visitante.</p>
+
+        <ul class="equipos__lista">
+          <li class="equipo"><span class="equipo__nombre">Aurora FC</span> <span class="equipo__ciudad">Bogotá</span></li>
+          <li class="equipo"><span class="equipo__nombre">Distrito Norte</span> <span class="equipo__ciudad">Medellín</span></li>
+          <li class="equipo"><span class="equipo__nombre">Pacífico 92</span> <span class="equipo__ciudad">Buenaventura</span></li>
+          <li class="equipo"><span class="equipo__nombre">Andina SC</span> <span class="equipo__ciudad">Manizales</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONFIANZA ===================== -->
+    <section class="seccion confianza" id="confianza" aria-labelledby="confianza-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="confianza-titulo">Lo que sabes antes de pagar</h2>
+
+        <ul class="confianza__lista">
+          <li class="confianza__item">
+            <h3>Entrega estimada</h3>
+            <p>Entre 2 y 5 días hábiles. Envío sin costo desde $350.000.</p>
+          </li>
+          <li class="confianza__item">
+            <h3>Cambios y devoluciones</h3>
+            <p>30 días para cambiar talla o devolver el producto sin usar, con la etiqueta puesta.</p>
+          </li>
+          <li class="confianza__item">
+            <h3>Pago seguro</h3>
+            <p>Los datos de tu tarjeta se procesan en la plataforma del proveedor de pagos, nunca en esta tienda.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO / NEWSLETTER ===================== -->
+    <section class="seccion contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contenedor">
+        <h2 class="seccion__titulo" id="contacto-titulo">Recibe las novedades</h2>
+        <p>Suscríbete y entérate primero de los lanzamientos de temporada.</p>
+
+        <form class="formulario" id="formulario-contacto">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+          <button type="submit" class="btn btn--primario">Suscribirme</button>
+          <p class="formulario__mensaje" id="formulario-mensaje" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="footer">
+    <div class="contenedor footer__contenido">
+      <p class="logo">ORBITA</p>
+      <ul class="footer__links">
+        <li><a href="#colecciones">Colecciones</a></li>
+        <li><a href="#destacados">Destacados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <p class="footer__copy">&copy; <span id="anio">2026</span> ORBITA · E-commerce Deportivo. Proyecto académico.</p>
+      <p class="footer__creditos">Fotografías de referencia vía Pexels.</p>
+    </div>
+  </footer>
+
+  <!-- Interactividad: la aporta la rama-js -->
+  <script src="script.js"></script>
+</body>
+</html>
